@@ -19,10 +19,6 @@ The implementations can be found in *Implementations.swift*
 **NB** If you can't see the values show the assistant editor with View->AssistantEditor->View Assistant Editor
 */
 
-let myAwesome = measure(name: "My implementation") {
-    myImpl(10000000000)
-}
-
-let theirsAwesome = measure(name: "Others implementation") {
-    othersImpl(10000000000)
+let swiftMaptest = measure(name: "Test swift map.") {
+    swiftMap(["testData", "testData", "testData", "testData", "testData", "testData", "testData", "testData"])
 }
