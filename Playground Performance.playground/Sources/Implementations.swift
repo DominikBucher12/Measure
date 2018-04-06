@@ -6,8 +6,8 @@ import Foundation
 // so always do this in Sources
 
 //Manually mapping an array
-public let handCodedImplementation = { (testData:[String])->Void in
-    var newArray = [String]()
+public let handCodedImplementation = { (testData: [String]) -> Void in
+    var newArray: [String] = []
 
     for value in testData{
         newArray.append(value.lowercased())
@@ -16,20 +16,6 @@ public let handCodedImplementation = { (testData:[String])->Void in
 
 //Just calling Swift map
 public let swiftMap = { (testData:[String]) -> Void in
-    testData.map({$0.lowercased()})
-
-    return Void()
-}
-
-public let myImpl = { (testData: Int) -> Void in
-    Set(Array(stride(from: 0, through: testData, by: 3)) + Array(stride(from: 0, through: testData, by: 5))).reduce(0, +)
-    return Void()
-}
-
-public let othersImpl = { (testData: Int) -> Void in 
-    (0 ... testData)
-        .filter { ($0 % 3) * ($0 % 5) == 0 }
-        .reduce(0, +)
-
+    testData.map( { $0.lowercased() } )
     return Void()
 }
