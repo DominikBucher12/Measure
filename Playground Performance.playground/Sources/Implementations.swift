@@ -9,13 +9,13 @@ import Foundation
 public let handCodedImplementation = { (testData: [String]) -> Void in
     var newArray: [String] = []
 
-    for value in testData{
+    for value in testData {
         newArray.append(value.lowercased())
     }
 }
 
 //Just calling Swift map
 public let swiftMap = { (testData:[String]) -> Void in
-    testData.map( { $0.lowercased() } )
+    _ = testData.map { $0.lowercased() }
     return Void()
 }
